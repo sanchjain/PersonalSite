@@ -1,0 +1,153 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #eefbfb;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/45b1f621324953.562ff4830fda5.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    text-shadow: 0 0 black;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    border: 0px solid #dee2e6!important;
+
+}
+
+.about-img {
+  background-size: cover;
+  position: relative;
+  top: 85px;
+  display: block;
+  left: 680px;
+  width: 25%;
+}
+
+.h-2 {
+    font-size: 28px;
+    letter-spacing: 10px;
+    position: relative;
+}
+
+.h-6 {
+    font-size: 16px;
+    max-width: 400px;
+    max-height: 600px;
+    top: -390px;
+    position: relative;
+    text-align: center;
+    left: 50px;
+}
+
+.mythingy {
+    top: -200px;
+    position: relative;
+}
+
+.col-xs-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 20%;
+    float: left;
+}
+
+div[class^="devicon"] {
+	display: block;
+	color: #333333;
+	font-size: 80px;
+    margin:  2vh auto 2vh auto;
+	text-align: center;
+}
+
+div[class^="devicon"] span{
+	font-family: Raleway, sans-serif;
+	font-weight: 600;
+	margin-top: 10px;
+	font-size: 16px;
+	display:block;
+}
+
+i[class^="fa"] {
+    display: block;
+    font-size: 20px;
+    margin:  2vh auto 2vh auto;
+    left: 800px;
+    top: -50px;
+    color: #74808a;
+}
+
+i[class^="fa"]:hover {
+    color: #337ab7;
+}
+
+.footer-copyright {
+    color: #1f1d1d !important;
+}
+
+.education {
+    height: 100px;
+    position: center;
+    background-color: white;
+    box-shadow: 0px 2px 15px 3px rgba(0,0,0,0.41);
+}
+
+.education-image {
+    height: 100px;
+    width: 150px;
+    float: left;
+    box-shadow: 1px 0px;
+
+}
+
+.education-text {
+    float: left;
+    margin-left: 10%;
+    margin-top: 34px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 100;
+  width: 94.5%;
+  display: block;
+  border: none;
+  padding: 0.8em;
+  border: solid 1px rgba(255, 255, 255, 0.37);
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
+  background-position: -800px 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}

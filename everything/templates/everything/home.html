@@ -1,0 +1,249 @@
+{%load static%}
+  <html>
+    <head>
+        <title>Sanchaaa</title>
+
+        <!-- Import style.css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}">
+        <!-- Import Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Carme' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- devicon icons -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <!-- fa icons -->
+        <script src="https://kit.fontawesome.com/090d83ba6c.js" crossorigin="anonymous"></script>
+        <!-- my js file-->
+        <script src="{% static 'jsfile.js' %}"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+    </head>
+
+    <body>
+
+        <!-- NAVBAR -->
+        <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper grey">
+                <a href="" class="brand-logo" style="padding-left: 40px; font-family: 'Cinzel Decorative'; font-size: 22px;">Sanchit Jain</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down" style="padding-right: 40px; font-family: 'Carme'">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="{% static 'Resume.docx' %}" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+        <!-- NAVBAR CLOSE -->
+
+        <!-- IMAGE -->
+        <div class="bg">
+            <div class="caption">
+                <span class="border">HI</span>
+                <br>
+                <br>
+                <span class="border">I'M SANCHIT</span>
+            </div>
+        </div>
+        <!-- IMAGE CLOSE -->
+
+        <!-- ABOUT -->
+        <div class="container" id="about">
+            <a id="about"></a>
+            <img src="{% static 'luffy.png' %}" class="about-img">
+
+            <div class="h-2" style="top: -430px; left: 130px;">ABOUT ME</div>
+            <div class="h-6" style="">I'm just an 18 year who took interest in this world of programming. I've only been programming for about an year now and I do admit I'm still finding my way. However, I still have a stong passion for it.<br><br><br> I have explored the numerous libraries of Python such as Selenium, BeautifulSoup, Pandas and more. Ive always done my fair share of web development as Django programmer but now I want to move on. I believe machine learning is the path for me, and I barely know anything about it. Hell, I still barely know the basics of programming. But, now I'm starting to learn about it and it sure has been fun till now.</div>
+        </div>
+
+        <!-- mythingy begins -->
+        <div class="mythingy">
+            <div style="background-color: #e0f2f1;">
+
+
+            <hr>
+            <br>
+            <br>
+
+        <div class="row">
+            <div class="container">
+                <center class="h-2">SKILLS</center>
+                <br>
+                <br>
+                <div class="devicon-django-plain col-xs-15">
+                    <span>Django</span>
+                </div>
+                <div class="devicon-python-plain col-xs-15">
+                    <span>Python3</span>
+                </div>
+                <div class="devicon-html5-plain col-xs-15">
+                    <span>HTML</span>
+                </div>
+                <div class="devicon-css3-plain col-xs-15">
+                    <span>CSS</span>
+                </div>
+                <div class="devicon-javascript-plain col-xs-15">
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="devicon-cplusplus-plain col-xs-15">
+                    <span>C++</span>
+                </div>
+                <div class="devicon-github-plain col-xs-15">
+                    <span>Github</span>
+                </div>
+                <div class="devicon-webpack-plain col-xs-15">
+                    <span>BeautifulSoup</span>
+                </div>
+                <div class="devicon-webpack-plain col-xs-15">
+                    <span>Arduino</span>
+                </div>
+                <div class="devicon-webpack-plain col-xs-15">
+                    <span>Selenium</span>
+                </div>
+            </div>
+        </div>
+
+            <br>
+            <a id="projects"></a>
+
+            <hr>
+            </div>
+            <br>
+            <br>
+
+<!-- Projects -->
+        <div class="container">
+            <center class="h-2">PROJECTS</center>
+            <br>
+            <br>
+            <ul class="collapsible">
+            {% for project in projects.all %}
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>{{project.project_title}}</div>
+                <div class="collapsible-body grey darken-3" style="color: #ffffff"><span>{{project.project_summary}}</span></div>
+              </li>
+            {% endfor %}
+            </ul>
+            <br>
+        </div>
+
+
+
+            <br>
+              <div style="background-color: #e0f2f1;">
+
+            <hr>
+
+<!-- Education -->
+          <a id="education"></a>
+            <br>
+            <br>
+            <center class="h-2">EDUCATION</center>
+            <br>
+            <br>
+
+
+         <div class="container" style="width: 60%;">
+          {% for edu in education.all %}
+
+            <div class="education">
+                <img class="education-image" src="{{ edu.education_image.url }}" style="height: 100px; width: 150px;">
+                <p class="education-text">{{ edu.education_name }}</p>
+            </div>
+             <br>
+         {% endfor %}
+        </div>
+
+<br>
+<br>
+<hr>
+</div>
+
+<br>
+<br>
+<center class="h-2" style="letter-spacing: 2px;">Get in touch</center>
+<br>
+<div class="main-agileinfo">
+    <div class="agileits-top">
+        <!-- Form -->
+        <form>
+          <!-- name -->
+          <input class="text" id="name" type="text" name="name" value="Name" required onblur="checkUsername(this);">
+          <div class="form-alert" id="namealert" role="alert">Hi
+          </div>
+          <!-- email -->
+          <input class="text" id="email" type="text" name="email" value="Email" required onblur="checkEmailRegex(this);">
+          <div class="form-alert" id="emailalert" role="alert">
+          </div>
+          <!-- message -->
+          <input class="text" id="message" type="text" name="message" value="Message" required onkeyup="checkMessage(this);">
+          <div class="form-alert" id="msgalert" role="alert">
+          </div>
+        <!-- submit -->
+        <input type="button" value="Next" id="nextbtn" onclick="onNextButtonClick();">
+
+        </form>
+    </div>
+</div>
+
+
+
+<!-- mythingy ends-->
+    </div>
+
+<!-- footer -->
+    <footer class="page-footer brown lighten-5" style="padding-top: 0px;">
+     <div class="footer-copyright" style="padding-bottom: 0px;">
+       <div class="container" style="position: relative; left: 0px; top: 25px;">
+       <span style="#0000000">© {% now "Y" %} Copyright Sanchit Jain</span>
+       <div class="col-sm-5 social">
+           <ul>
+               <li>
+                   <a href="github.com/sanchjain/" target="_blank">
+                       <i class="fa fa-github col-xs-15" aria-hidden="true"></i>
+                   </a>
+               </li>
+               <li>
+                   <a href="https://www.linkedin.com/in/sanchit-jain-334706194/" target="_blank">
+                       <i class="fa fa-linkedin col-xs-15" aria-hidden="true"></i>
+                   </a>
+               </li>
+               <li>
+                   <a href="https://www.instagram.com/_sanchitj_/" target="_blank">
+                       <i class="fa fa-instagram col-xs-15" aria-hidden="true"></i>
+                   </a>
+               </li>
+           </ul>
+       </div>
+       </div>
+     </div>
+    </footer>
+
+
+
+
+
+
+
+        </div>
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+  </html>
