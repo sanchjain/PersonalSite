@@ -13,6 +13,10 @@ var check_name = false;
 var check_email = false;
 var check_msg = false;
 
+function onNextButtonClick() {
+    raiseAlert("nextalert", "Sent!")
+
+}
 
 function checkUsername(username) {
 

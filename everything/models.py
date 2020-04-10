@@ -17,7 +17,7 @@ class Education(models.Model):
     def __str__(self):
         return self.education_name
 
-class Contact(models.Model):
+class Message(models.Model):
 
     contact_name = models.CharField(max_length=100)
     contact_email = models.CharField(max_length=100)
